@@ -1,0 +1,11 @@
+id,order_id,payment_method,amount
+1,1,credit_card,120.50
+2,2,bank_transfer,75.00
+3,3,credit_card,220.00
+4,4,credit_card,45.99
+5,5,credit_card,310.25
+6,6,coupon,89.90
+7,7,bank_transfer,150.00
+8,8,credit_card,60.00
+9,9,credit_card,199.99
+10,10,credit_card,49.50
