@@ -1,0 +1,11 @@
+id,customer_id,order_date,status,order_total
+1,1,2026-07-01,completed,120.50
+2,2,2026-07-01,completed,75.00
+3,1,2026-07-02,completed,220.00
+4,3,2026-07-03,returned,45.99
+5,4,2026-07-04,completed,310.25
+6,5,2026-07-05,completed,89.90
+7,2,2026-07-06,completed,150.00
+8,6,2026-07-07,pending,60.00
+9,3,2026-07-08,completed,199.99
+10,1,2026-07-09,completed,49.50
