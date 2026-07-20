@@ -1,0 +1,4 @@
+acryl-datahub>=0.14.0
+anthropic>=0.34.0
+requests>=2.31.0
+sqlglot>=25.0.0
