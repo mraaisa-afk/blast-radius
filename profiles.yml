@@ -1,0 +1,9 @@
+# Local dbt profile using DuckDB (no cloud warehouse needed).
+# dbt finds this file automatically when you run dbt from the repo root
+# with: dbt run --profiles-dir .
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: jaffle_shop.duckdb
