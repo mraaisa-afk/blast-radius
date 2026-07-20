@@ -1,0 +1,15 @@
+# DataHub ingestion recipe for the dbt project.
+# Usage:
+#   1. dbt docs generate          (produces target/manifest.json + catalog.json)
+#   2. datahub ingest -c dbt_recipe.yml
+source:
+  type: dbt
+  config:
+    manifest_path: target/manifest.json
+    catalog_path: target/catalog.json
+    target_platform: postgres
+sink:
+  type: datahub-rest
+  config:
+    server: ${DATAHUB_URL}
+    token: ${DATAHUB_TOKEN}
