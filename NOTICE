@@ -1,0 +1,34 @@
+Blast Radius
+Copyright 2026 Mahadia Hasan Raaisa
+
+This product includes software developed for the
+"Build with DataHub: The Agent Hackathon".
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+------------------------------------------------------------------------
+Third-party components
+------------------------------------------------------------------------
+This project depends on the following open-source projects, each governed
+by its own license. They are installed via requirements.txt and are NOT
+redistributed as part of this repository:
+
+  - DataHub / acryl-datahub ........ Apache-2.0
+    https://github.com/datahub-project/datahub
+  - dbt-core / dbt-duckdb .......... Apache-2.0
+    https://github.com/dbt-labs/dbt-core
+  - requests ....................... Apache-2.0
+  - sqlglot ........................ MIT
+    https://github.com/tobymao/sqlglot
+  - anthropic (Python SDK) ......... MIT
+  - marocchino/sticky-pull-request-comment (GitHub Action) ... MIT
+
+The demo data is derived from dbt Labs' "Jaffle Shop" example project.
