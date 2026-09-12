@@ -26,6 +26,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Generate dbt manifest (for Jinja-safe column detection)
+        run: |
+          # dbt parse generates target/manifest.json without needing a warehouse
+          # This allows blast_radius.py to use manifest.json instead of sqlglot parsing Jinja
+          dbt parse --profiles-dir . || echo "[warn] dbt parse failed, falling back to sqlglot"
+          ls -lh target/manifest.json || echo "manifest not found"
+
       - name: Detect changed model files
         id: changes
         run: |
@@ -40,7 +47,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           BASE_REF: origin/${{ github.base_ref }}
         run: |
-          python blast_radius.py --changed-files ${{ steps.changes.outputs.files }} --output report.md
+          python blast_radius.py --changed-files ${{ steps.changes.outputs.files }} --output report.md --manifest target/manifest.json --catalog target/catalog.json
 
       - name: Post impact report on the PR
         if: steps.changes.outputs.files != ''
