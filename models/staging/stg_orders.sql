@@ -3,5 +3,4 @@ select
     customer_id,
     order_date,
     status,
-    order_total
 from {{ ref('raw_orders') }}
