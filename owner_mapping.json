@@ -1,0 +1,7 @@
+{
+  "alice": "alice",
+  "bob": "bob",
+  "datahub": "datahub",
+  "example": "example",
+  "_comment": "Map DataHub usernames (CorpUser) to GitHub usernames for auto-requesting PR reviewers. Add your team mappings here."
+}
